@@ -27,7 +27,7 @@ const helpEmbed = new MessageEmbed()
 
 
 client.on('ready', () => {
-    /*console.log(`${client.user.tag} has logged in`)*/
+    console.log(`${client.user.tag} has logged in`)
 })
 
 client.on('message', (message) => {
