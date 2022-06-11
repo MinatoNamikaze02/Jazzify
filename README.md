@@ -18,4 +18,6 @@ This bot is built using the Spotify recommendations API.
 #Example
 Below is an example video demonstrating the usages of the bot. Will add more as development progresses!
 
-![implementation1](https://github.com/MinatoNamikaze02/Jazzify-bot/blob/master/github/sample-video.mp4)
+![implementation1](https://user-images.githubusercontent.com/85065053/173198018-27e2d95b-42d6-4dae-9602-fc7e9d51decb.mp4)
+
+
