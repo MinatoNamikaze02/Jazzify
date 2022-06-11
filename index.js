@@ -1,10 +1,11 @@
 require('dotenv').config()
 const { Client, MessageEmbed } = require('discord.js')
 const fs = require("fs")
-const {getAuth, spotifyRecommendations} = require('./spot-analytics/songs_sug.js')
+const {getAuth, spotifyRecommendations} = require('./src/spot-analytics/songs_sug.js')
 const client = new Client()
 let PREFIX = ""
 
+/*
 try{
     const jsonString = fs.readFileSync('./config.json', 'utf-8')
     const temp = JSON.parse(jsonString)
@@ -13,6 +14,7 @@ try{
 }catch (err){
     //console.log(err)
 }
+*/
 
 const helpEmbed = new MessageEmbed()
 .setTitle("Jazzify Bot")
