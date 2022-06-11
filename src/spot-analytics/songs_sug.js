@@ -4,13 +4,14 @@ const qs = require('qs')
 const client = process.env.client
 const secret = process.env.secret
 const auth_token = Buffer.from(`${client}:${secret}`, 'utf-8').toString('base64');
+const {TOKEN_URL, SEARCH_URL, RECOMMENDATION_URL} = require('../CONSTANTS.js')
 
 
 
 const getAuth = async (songs) => {
     try{
       //make post request to SPOTIFY API for access token, sending relavent info
-      const token_url = 'https://accounts.spotify.com/api/token';
+      const token_url = TOKEN_URL;
       const data = qs.stringify({'grant_type':'client_credentials'});
       const response = await axios.post(token_url, data, {
         headers: { 
@@ -37,7 +38,7 @@ const getAuth = async (songs) => {
 }
 
 const spotifyAnalytics = async (res, songs) => {
-    let BASE_URL = "https://api.spotify.com/v1/search?q="
+    let BASE_URL = SEARCH_URL
     var links = []
     var res_array = []
     for(var i = 0; i < songs.length; i++){
@@ -58,8 +59,8 @@ const spotifyAnalytics = async (res, songs) => {
             res_array[i] = response.data
             
         }catch(err){
-            console.log(err.message)
-            console.log("err")
+            //console.log(err.message)
+            //console.log("err")
             break
         }
     }
@@ -68,13 +69,13 @@ const spotifyAnalytics = async (res, songs) => {
 }
 
 const spotifyRecommendations = async (artists, genres, songs, limit, token) => {
-    console.log(artists)
-    console.log(genres)
+    //console.log(artists)
+    //console.log(genres)
     //console.log(token)
-    console.log(songs)
-    console.log(limit)
-    console.log(`TOKEN: ${token}`)
-    let rec_url = "https://api.spotify.com/v1/recommendations?"
+    //console.log(songs)
+    //console.log(limit)
+    //console.log(`TOKEN: ${token}`)
+    let rec_url = RECOMMENDATION_URL
     let artists_url = "&seed_artists="
     let tracks_url = "&seed_tracks="
     let genres_url = "&seed_genres="
@@ -96,7 +97,7 @@ const spotifyRecommendations = async (artists, genres, songs, limit, token) => {
     }
     let limit_url = `limit=${limit}`
     rec_url += limit_url + artists_url + genres_url + tracks_url
-    console.log(rec_url)
+    //console.log(rec_url)
     try{
         const response = await axios.get(rec_url, {
             headers : {
@@ -107,7 +108,8 @@ const spotifyRecommendations = async (artists, genres, songs, limit, token) => {
         return response.data
         
     }catch(err){
-        console.log(err)
+        //console.log(err)
+        return
     }
 
 }

@@ -3,17 +3,15 @@ const { Client, MessageEmbed } = require('discord.js')
 const fs = require("fs")
 const {getAuth, spotifyRecommendations} = require('./spot-analytics/songs_sug.js')
 const client = new Client()
-const config = require('../config.json')
-const { channel } = require('diagnostics_channel')
 let PREFIX = ""
 
 try{
     const jsonString = fs.readFileSync('./config.json', 'utf-8')
     const temp = JSON.parse(jsonString)
     PREFIX = temp.user.prefix
-    console.log(PREFIX)
+    //console.log(PREFIX)
 }catch (err){
-    console.log(err)
+    //console.log(err)
 }
 
 const helpEmbed = new MessageEmbed()
@@ -29,7 +27,7 @@ const helpEmbed = new MessageEmbed()
 
 
 client.on('ready', () => {
-    console.log(`${client.user.tag} has logged in`)
+    /*console.log(`${client.user.tag} has logged in`)*/
 })
 
 client.on('message', (message) => {
@@ -82,7 +80,7 @@ client.on('message', (message) => {
                                 return
                             }
                             genres[0] = args[i+1]
-                            console.log(genres)
+                            // console.log(genres)
                         }else{
                             message.channel.send("No genres given!!")
                             return
