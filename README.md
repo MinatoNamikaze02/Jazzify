@@ -15,7 +15,7 @@ This bot is built using the Spotify recommendations API.
  * Type `!bf help` for a dedicated help message!
  * An example is shown below.
 
-#Example
+# Example
 Below is an example video demonstrating the usages of the bot. Will add more as development progresses!
 
 https://user-images.githubusercontent.com/85065053/173198018-27e2d95b-42d6-4dae-9602-fc7e9d51decb.mp4
