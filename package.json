@@ -1,0 +1,23 @@
+{
+  "name": "spotify-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/bot.js",
+    "dev": "nodemon ./src/bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "config": "^3.3.7",
+    "discord.js": "^12.5.3",
+    "dotenv": "^16.0.1",
+    "fetch": "^1.1.0",
+    "nodemon": "^2.0.16",
+    "qs": "^6.10.5"
+  }
+}
