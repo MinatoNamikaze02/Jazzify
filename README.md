@@ -9,7 +9,7 @@ This bot is built using the Spotify recommendations API.
  * Can Suggest a maximum of 100 songs!
  
 # How To Invite
- * Use the link in the description to invite the bot
+ * Not hosted yet!(still needs minor updates)
 
 # Usage
  * Type `!bf help` for a dedicated help message!
