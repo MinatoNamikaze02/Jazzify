@@ -3,14 +3,29 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+  "engines": {
+    "node": "16.15.0",
+    "npm": "8.5.5"
+  },
+   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "heroku",
+    "discord.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinatoNamikaze02/Jazzify.git"
+  },
+  "author": "Arjhun S",
+  "license": "MIT",
+  "bugs": {
+    "url" : "https://github.com/MinatoNamikaze02/Jazzify/issues"
+  },
+  "homepage": "https://github.com/MinatoNamikaze02/Jazzify#readme",
   "dependencies": {
     "axios": "^0.27.2",
     "config": "^3.3.7",
